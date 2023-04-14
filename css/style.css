@@ -1,0 +1,279 @@
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif; */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-bg-nav: #2E323F;
+    --clr-bg-card: #3B4050;
+    --clr-bg-args: #ccc;
+    --clr-txt: #6F737F;
+    --clr-txt-primary: #FFF;
+    --clr-txt-secondary: #A59678;
+
+    font-family: 'Oswald', sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background: var(--clr-bg-nav);
+    padding: 0.5rem 0;
+}
+
+nav {
+    color: var(--clr-txt-primary);
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav #burger {
+    width: 48px;
+}
+
+nav ul {
+    width: 70%;
+    display: none;
+}
+
+nav ul li {
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    cursor: pointer;
+}
+
+nav ul li:last-child {
+    background-color: var(--clr-txt-secondary);
+    padding: 0.5em 1rem;
+    border-radius: 50px;
+    width: fit-content;
+}
+
+.navMobile {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 50vw;
+    background: var(--clr-bg-nav);
+    padding: 1rem;
+    border-radius: 10px;
+    align-items: end;
+}
+
+.hero {
+    background: var(--clr-bg-card);
+    padding: 1rem;
+}
+
+.hero div h1 {
+    font-size: min(15vw, 5.625rem);
+    color: var(--clr-txt-primary);
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.hero div h1 span {
+    color: var(--clr-txt-secondary);
+}
+
+.hero div div p {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--clr-txt-primary);
+    font-size: min(5vw, 1.5rem);
+}
+
+.hero div div button {
+    font-weight: 700;
+    font-size: min(5vw, 1.5rem);
+    background: var(--clr-txt-secondary);
+    color: var(--clr-txt-primary);
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+#args {
+    background: var(--clr-bg-args);
+    padding: 1rem;
+}
+#args>div>div {
+    margin-bottom: 1.5rem;
+}
+#args div h2 {
+    color: var(--clr-txt-secondary);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#args div p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125rem;
+}
+
+#last {
+    padding: 1rem;
+}
+#last>div {
+    margin-bottom: 1rem;
+}
+#image {
+    max-height: 150px;
+    overflow-y: hidden;
+}
+#image img{
+    width: 100%;
+}
+#last div p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3125rem;
+    margin-bottom: 1rem;
+}
+#last div h2 {
+    font-size: 2rem;
+    color: var(--clr-txt-secondary);
+    margin-bottom: 1rem;
+}
+#last .card {
+    background: var(--clr-bg-card);
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#last .card h2 {
+    font-size: 1.875rem;
+    min-height: calc(1.875rem * 2);
+    color: var(--clr-txt-primary);
+    line-height: 1;
+}
+#last .card p {
+    font-size: 1.125rem;
+    color: var(--clr-txt-primary);
+}
+
+footer {
+    background: var(--clr-bg-card);
+}
+footer>div {
+    padding: 1rem;
+}
+footer>div h2 {
+    font-size: 1.8rem;
+    color: var(--clr-txt-primary);
+    text-align: center;
+}
+footer h3 {
+    font-size: 1.3125rem;
+    color: var(--clr-txt-secondary);
+    line-height: 2.5;
+}
+footer p,
+footer ul {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125rem;
+    color: var(--clr-txt-primary);
+}
+footer ul {
+    line-height: 2;
+}
+footer ul li {
+    list-style: none;
+}
+footer #liens {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 700px) {
+    header nav ul {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    header nav #burger {
+        display: none;
+    }
+
+    .hero, #args, #last, footer {
+        padding: 5rem;
+    }
+    .hero div h1,
+    .hero div div {
+        width: 50%;
+        padding: 0;
+        align-self: flex-end;
+    }
+    .hero div h1 {
+        font-size: min(7.5vw, 5.625rem);
+        margin-bottom: 0;
+    }
+    .hero>div {
+        display: flex;
+        gap: 1rem;
+    }
+    #args>div {
+        display: flex;
+        gap: 3.5rem;
+    }
+    #args>div>div {
+        margin-bottom: 0rem;
+        text-align: center;
+    }
+    .cards {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 0;
+        align-items: end;
+    }
+    .card {
+        margin: 0;
+        max-width: 285px;
+    }
+    footer>div>div {
+        display: flex;
+        gap: 2rem;
+    }
+    footer #liens {
+        justify-content: flex-end;
+        gap: 2rem;
+    }
+    footer>div>div>div {
+        width: 50%;;
+    }
+}
+
+@media (min-width: 1000px) {
+    #last>div {
+        display: flex;
+        gap: 3rem;
+    }
+    #image {
+        max-height: unset;
+        overflow-y: unset;
+        margin: 1rem 0;
+    }
+    .cards {
+        width: 40%;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
